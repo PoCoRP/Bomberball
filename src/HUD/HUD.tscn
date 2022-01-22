@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://imgs/hud_heartFull.png" type="Texture" id=2]
+[ext_resource path="res://imgs/Bonus/BonusLumiere1.png" type="Texture" id=3]
+[ext_resource path="res://imgs/Bonus/BonusBombe1.png" type="Texture" id=4]
+[ext_resource path="res://imgs/Bonus/BonusVitesse1.png" type="Texture" id=5]
+[ext_resource path="res://imgs/Bonus/BonusPousser1.png" type="Texture" id=6]
+[ext_resource path="res://imgs/Bonus/BonusGodMode1.png" type="Texture" id=7]
+[ext_resource path="res://imgs/Bonus/BonusPortee1.png" type="Texture" id=8]
+
+[node name="HUD" type="Control"]
+light_mask = 8
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.6, 0.6 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+margin_right = 176.0
+margin_bottom = 84.0
+rect_scale = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heart" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+light_mask = 8
+margin_right = 404.0
+margin_bottom = 45.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="a" type="TextureRect" parent="CanvasLayer/VBoxContainer/Heart"]
+light_mask = 8
+margin_right = 53.0
+margin_bottom = 45.0
+texture = ExtResource( 2 )
+
+[node name="b" type="TextureRect" parent="CanvasLayer/VBoxContainer/Heart"]
+light_mask = 8
+margin_left = 57.0
+margin_right = 110.0
+margin_bottom = 45.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="c" type="TextureRect" parent="CanvasLayer/VBoxContainer/Heart"]
+light_mask = 8
+margin_left = 114.0
+margin_right = 167.0
+margin_bottom = 45.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+light_mask = 8
+margin_top = 49.0
+margin_right = 404.0
+margin_bottom = 113.0
+
+[node name="BonusG" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+light_mask = 8
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 7 )
+
+[node name="BonusL" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+light_mask = 8
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+texture = ExtResource( 3 )
+
+[node name="BonusN" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+light_mask = 8
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+texture = ExtResource( 4 )
+
+[node name="BonusP" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+light_mask = 8
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
+texture = ExtResource( 6 )
+
+[node name="BonusR" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+light_mask = 8
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 64.0
+texture = ExtResource( 8 )
+
+[node name="BonusV" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+light_mask = 8
+margin_left = 340.0
+margin_right = 404.0
+margin_bottom = 64.0
+texture = ExtResource( 5 )

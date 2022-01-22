@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Son Clic Bouton.mp3-f85a229c8d2a4ecc08b850cafd1de640.mp3str"
+
+[deps]
+
+source_file="res://ressources/Musics/Son Clic Bouton.mp3"
+dest_files=[ "res://.import/Son Clic Bouton.mp3-f85a229c8d2a4ecc08b850cafd1de640.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

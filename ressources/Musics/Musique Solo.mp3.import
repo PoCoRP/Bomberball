@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Musique Solo.mp3-edf87429b06824f534f8fff8b79717c8.mp3str"
+
+[deps]
+
+source_file="res://ressources/Musics/Musique Solo.mp3"
+dest_files=[ "res://.import/Musique Solo.mp3-edf87429b06824f534f8fff8b79717c8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

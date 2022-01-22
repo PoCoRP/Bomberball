@@ -1,0 +1,45 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ressources/Bonus/bonus_portee.png" type="Texture" id=1]
+[ext_resource path="res://ressources/Bonus/bonus_bombe.png" type="Texture" id=2]
+[ext_resource path="res://ressources/Bonus/bonus_godmode.png" type="Texture" id=3]
+[ext_resource path="res://ressources/Bonus/bonus_pousser.png" type="Texture" id=4]
+[ext_resource path="res://ressources/Bonus/bonus_vitesse.png" type="Texture" id=5]
+[ext_resource path="res://ressources/Bonus/bonus_lumiere.png" type="Texture" id=6]
+[ext_resource path="res://src/Wall/BonusWall.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.8174, 31.5152 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "solo",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "multi",
+"speed": 3.0
+} ]
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -31.8733, -32.3285, 32.0677, -32.171, 31.9102, 31.77, -31.8733, 31.9275 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "multi"
+frame = 4
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 3 )

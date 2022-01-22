@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Son Survol Bouton.mp3-d8035771a2d73db7e527891e70dd2b55.mp3str"
+
+[deps]
+
+source_file="res://ressources/Musics/Son Survol Bouton.mp3"
+dest_files=[ "res://.import/Son Survol Bouton.mp3-d8035771a2d73db7e527891e70dd2b55.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
